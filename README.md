@@ -1,4 +1,4 @@
-# PTC Portal
+# Starter Kit
 
 ## Table of Contents
 
@@ -64,12 +64,7 @@ There is one types of objects stored in the database so far: students. To minimi
 ####[User](server/controllers/students/studentsController.js)
 ```javascript
 {
-name       : ... //String
-email      : ... //String
-lesson     : ... //String
-level      : ... //String
-interview  : ... //String
-decision   : ... //String
+...
 }
 ```
 
