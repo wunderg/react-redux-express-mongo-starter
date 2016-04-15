@@ -1,0 +1,25 @@
+nav {
+  position: fixed;
+  margin: 0 0 3rem 0;
+  font-size: 1.3rem;
+  z-index: 5;
+
+  .brand-logo {
+    margin-left: 0.5rem;
+    font-weight: bold;
+  }
+  a {
+  }
+
+  ul{
+    margin: 0 2.5rem 0 0;
+    li {
+      margin: 0 1rem 1rem 0;
+      a {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
