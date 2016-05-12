@@ -23,20 +23,9 @@ class Navbar extends Component {
             <i className="fa fa-align-justify"></i>
           </a>
           <ul className="right hide-on-med-and-down">
-            <li><Link to={'/add'}>Add</Link></li>
-            <li><Link to={'/'}>Dashboard</Link></li>
-            <li><Link to={'/about'}>About</Link></li>
-            <li><Link to={'/resources'}>Resources</Link></li>
-            <li><Link to={'/faq'}>FAQ</Link></li>
             <li><Link to={'/faq'}>Login</Link></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
-            <li><Link to={'/add'}>Add Student</Link></li>
-            <li><a href="">Results</a></li>
-            <li><Link to={'/'}>Dashboard</Link></li>
-            <li><Link to={'/guide'}>Guide</Link></li>
-            <li><Link to={'/resources'}>Resources</Link></li>
-            <li><Link to={'/faq'}>FAQ</Link></li>
             <li><a href="">Login</a></li>
           </ul>
         </div>

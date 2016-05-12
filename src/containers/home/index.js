@@ -10,46 +10,9 @@ class Home extends Component {
   componentWillMount() {
   }
 
-
   render() {
     return (
       <div className="row">
-        <div className="col s4">
-          <div className="card blue-grey darken-1">
-            <div className="card-content white-text">
-              <span className="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col s4">
-          <div className="card blue-grey darken-1">
-            <div className="card-content white-text">
-              <span className="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col s4">
-          <div className="card blue-grey darken-1">
-            <div className="card-content white-text">
-              <span className="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col s4">
-          <div className="card blue-grey darken-1">
-            <div className="card-content white-text">
-              <span className="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        </div>
         <div className="col s4">
           <div className="card blue-grey darken-1">
             <div className="card-content white-text">
@@ -65,6 +28,7 @@ class Home extends Component {
 }
 
 Home.propTypes = {
+  router: PropTypes.object
 };
 
 function mapStateToProps(state) {
@@ -79,10 +43,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 Home.propTypes = {
-  addTodo: PropTypes.func,
-  data: PropTypes.object,
-  fetchStudents: PropTypes.func,
-  history: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
