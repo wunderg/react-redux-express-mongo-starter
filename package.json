@@ -10,7 +10,7 @@
     "build-server": "babel -d ./dist ./server -s",
     "lint": "eslint src; exit 0",
     "clean": "rimraf dist",
-    "build-prod": "npm run clean && npm run build-client && npm run build-server"
+    "heroku-postbuild": "npm run clean && npm run build-client && npm run build-server"
   },
   "engines": {
     "node": "5.7.0",
