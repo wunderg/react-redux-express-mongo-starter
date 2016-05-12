@@ -9,7 +9,6 @@ import mongoose from 'mongoose';
 import appRouter from './routes/appRouter';
 import apiRouter from './routes/apiRouter';
 
-mongoose.connect('mongodb://heroku_hlts8n62:39jnujkhmu3n68fr7a146pfp40@ds019068.mlab.com:19068/heroku_hlts8n62');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isDeveloping = !isProduction;
@@ -18,6 +17,9 @@ const port = isProduction ? (process.env.PORT || 80) : 3000;
 const app = express();
 
 const staticPath = path.join(__dirname, '../');
+const mongoDB = process.env.MONGODB_URI || 'mongodb://localhost/tester';
+
+mongoose.connect(mongoDB);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
