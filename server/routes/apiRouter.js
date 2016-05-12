@@ -1,4 +1,4 @@
-import StudentController from '../controllers/students/studentsController';
+import dataController from '../controllers/data/dataController';
 
 module.exports = (app, express) => {
   var apiRouter = new express.Router();
@@ -7,15 +7,15 @@ module.exports = (app, express) => {
 
   apiRouter.use((req, res, next) => {
     console.log('route');
-    next()
+    next();
   });
 
   apiRouter.param('id', (req, res, next, id) => {
-    //validate user or check some data
+    // validate user or check some data
     next();
-  })
+  });
 
-  apiRouter.get('/students', StudentController.get);
-  apiRouter.post('/student', StudentController.post);
-  apiRouter.delete('/student/:id', StudentController.delete);
+  apiRouter.get('/data', dataController.get);
+  apiRouter.post('/data', dataController.post);
+  apiRouter.delete('/data/:id', dataController.delete);
 };

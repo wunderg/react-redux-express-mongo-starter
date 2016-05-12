@@ -10,10 +10,14 @@ body {
   width: 95% !important;
 }
 
-@import './node_modules/materialize-css/sass/components/_color.scss';
+/*** Components styles ***/
+@import './src/containers/navbar/style.scss';
+
 
 /*** Colors ***/
-$primary-color: color("blue", "darken-2") !default;
+@import './node_modules/materialize-css/sass/components/_color.scss';
+
+$primary-color: color("pink", "darken-4") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
