@@ -16,7 +16,8 @@
     "no-var": 0,
     "vars-on-top": 0,
 
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "max-len": [2, 150, 4]
   },
   "plugins": [
     "react"
