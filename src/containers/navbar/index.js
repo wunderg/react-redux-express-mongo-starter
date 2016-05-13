@@ -22,7 +22,7 @@ class Navbar extends Component {
             <i className="fa fa-align-justify"></i>
           </a>
           <ul className="right hide-on-med-and-down">
-            <li><Link to={'/faq'}>Login</Link></li>
+            <li><Link to={'/login'}>Login</Link></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><a href="">Login</a></li>
