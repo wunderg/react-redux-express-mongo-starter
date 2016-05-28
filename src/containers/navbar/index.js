@@ -21,7 +21,7 @@ class Navbar extends Component {
       return (
         <nav>
           <div className="nav-wrapper">
-            <Link to={`/`} className="brand-logo">PTC Portal</Link>
+            <Link to={`/`} className="brand-logo">MERN STARTER</Link>
             <a href="#" data-activates="mobile-demo" className="button-collapse">
               <i className="fa fa-align-justify"></i>
             </a>
@@ -45,21 +45,19 @@ class Navbar extends Component {
             <i className="fa fa-align-justify"></i>
           </a>
           <ul className="right hide-on-med-and-down">
-            <li><Link to={'/add'}>Add Student</Link></li>
-            <li><Link to={'/results'}>Results</Link></li>
+            <li><Link to={'/add'}>Add data</Link></li>
             <li><Link to={'/dashboard'}>Dashboard</Link></li>
-            <li><Link to={'/guide'}>Guide</Link></li>
-            <li><Link to={'/resources'}>Resources</Link></li>
-            <li><Link to={'/faq'}>FAQ</Link></li>
+            <li><Link to={'/hiddenroute'}>Hidden Link</Link></li>
+            <li><Link to={'/hiddenroute'}>Hidden Link</Link></li>
+            <li><Link to={'/hiddenroute'}>Hidden Link</Link></li>
             <li className="logout" onClick={this.props.logout}><Link to={''}>Logout</Link></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
-            <li><Link to={'/add'}>Add Student</Link></li>
-            <li><Link to={'/results'}>Results</Link></li>
+            <li><Link to={'/add'}>Add data</Link></li>
             <li><Link to={'/dashboard'}>Dashboard</Link></li>
-            <li><Link to={'/guide'}>Guide</Link></li>
-            <li><Link to={'/resources'}>Resources</Link></li>
-            <li><Link to={'/faq'}>FAQ</Link></li>
+            <li><Link to={'/hiddenroute'}>Hidden Link</Link></li>
+            <li><Link to={'/hiddenroute'}>Hidden Link</Link></li>
+            <li><Link to={'/hiddenroute'}>Hidden Link</Link></li>
             <li onClick={this.props.logout}><Link to={''}>Loqout</Link></li>
           </ul>
         </div>
