@@ -1,11 +1,11 @@
 import axios from 'axios';
 import * as ACTIONS from './constants';
 
-export function addData(data) {
+export function addData(input) {
   const nextId = Math.floor(Math.random() * 100);
   const data = {
     _id: nextId,
-    name: data
+    name: input
   };
 
   axios.post(`api/data`, data)

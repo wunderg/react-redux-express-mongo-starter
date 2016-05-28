@@ -1,22 +1,17 @@
 import * as ACTIONS from '../actions/constants';
-import { filterVisibility, filterInstructor } from './visibility.js';
 
 export default (state = { isFetching: true, students: [] }, action) => {
   switch (action.type) {
-    case ACTIONS.ADD_STUDENT:
+    case ACTIONS.ADD_DATA:
       return {...state, students: state.students.concat(action.payload)};
-    case ACTIONS.UPDATE_STUDENT:
+    case ACTIONS.UPDATE_DATA:
       return {...state, selectedStudent: action.payload};
-    case ACTIONS.FETCH_STUDENTS_REQUEST:
+    case ACTIONS.FETCH_DATA_REQUEST:
       return {...state, isFetching: true}
-    case ACTIONS.FETCH_STUDENTS_SUCCESS:
+    case ACTIONS.FETCH_DATA_SUCCESS:
       return {...state, isFetching: false, students: action.data.data, source: action.data.data}
-    case ACTIONS.FETCH_STUDENTS_FAILURE:
+    case ACTIONS.FETCH_DATA_FAILURE:
       return {...state, isFetching: false, message: action.data.message}
-    case ACTIONS.SELECT_STUDENT:
-      return {...state, selectedStudent: action.payload}
-    case ACTIONS.UPDATE_VISIBILITY:
-      return {...state, students: filterVisibility(filterInstructor(state.source, action.instructor), action.filter)}
     default:
       return state;
   }
