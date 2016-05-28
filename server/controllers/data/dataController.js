@@ -5,7 +5,7 @@ export default {
     Data
       .find({})
       .exec()
-      .then(student => res.json(student))
+      .then(data => res.json(data))
       .catch(err => res.json(err));
   },
 

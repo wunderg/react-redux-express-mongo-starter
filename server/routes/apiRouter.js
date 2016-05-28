@@ -1,6 +1,6 @@
 import passport from 'passport';
 
-import DataController from '../controllers/students/studentsController';
+import DataController from '../controllers/data/dataController.js';
 import UserController from '../controllers/user/userController.js';
 
 import '../services/passport.js';
@@ -25,10 +25,10 @@ module.exports = (app, express) => {
 
   apiRouter.post('/login', requireSignin, UserController.signin);
   apiRouter.post('/signup', UserController.signup);
-  apiRouter.post('/student', DataController.post);
+  apiRouter.post('/data', DataController.post);
   apiRouter.get('/tokenlogin', requireAuth, UserController.tokenLogin);
   apiRouter.get('/data', requireAuth, DataController.get);
   apiRouter.get('/instructors', requireAuth, UserController.getNames);
   apiRouter.put('/data', requireAuth, DataController.put);
-  apiRouter.delete('/student/:id', DataController.delete);
+  apiRouter.delete('/data/:id', DataController.delete);
 };
