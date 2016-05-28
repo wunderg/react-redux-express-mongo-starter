@@ -12,14 +12,14 @@ export function addData(data) {
   .then(res => console.log(res))
   .then(err => console.log(err));
   return {
-    type: ACTIONS.ADD_data,
+    type: ACTIONS.ADD_DATA,
     payload: data
   };
 }
 
 export function selectData(data) {
   return {
-    type: ACTIONS.SELECT_data,
+    type: ACTIONS.SELECT_DATA,
     payload: data
   };
 }
@@ -33,32 +33,32 @@ export function updateData(data) {
 
   axios.put(`api/data`, data, config);
   return {
-    type: ACTIONS.UPDATE_data,
+    type: ACTIONS.UPDATE_DATA,
     payload: data
   };
 }
 
-function requestFetchDatas() {
+function requestFetchData() {
   return {
     type: ACTIONS.FETCH_DATA_REQUEST,
   };
 }
 
-function fetchdatasSuccess(data) {
+function fetchDataSuccess(data) {
   return {
     type: ACTIONS.FETCH_DATA_SUCCESS,
     data
   };
 }
 
-function fetchdataFail(message) {
+function fetchDataFail(message) {
   return {
     type: ACTIONS.FETCH_DATA_FAILURE,
     message
   };
 }
 
-export function fetchdatas() {
+export function fetchData() {
   const token = localStorage.getItem('id_token') || null;
 
   const config = {
@@ -66,10 +66,10 @@ export function fetchdatas() {
   };
 
   return dispatch => {
-    dispatch(requestFetchdatas());
-    return axios.get(`api/datas`, config)
-    .then(res => dispatch(fetchdatasSuccess(res)))
-    .catch(err => dispatch(fetchdataFail(err)));
+    dispatch(requestFetchData());
+    return axios.get(`api/data`, config)
+    .then(res => dispatch(fetchDataSuccess(res)))
+    .catch(err => dispatch(fetchDataFail(err)));
   };
 }
 
