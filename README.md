@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/wunderg/ptcportal-demo.svg?branch=master)](https://travis-ci.org/wunderg/ptcportal-demo.svg)
 
-# PTC Portal
+# React-Redux-Express-Mongo-Starter-Kit
 
 ## Table of Contents
 
@@ -67,17 +67,12 @@ npm test:watch
 
 
 ### DB Schema
-There are two  types of objects stored in the database so far: students and users. To minimize http requests on the server, when retrieved, all references to other objects will be fully populated with complete objects, not just is numbers. The schema are as follows:
+There are two  types of objects stored in the database so far: datas and users. To minimize http requests on the server, when retrieved, all references to other objects will be fully populated with complete objects, not just is numbers. The schema are as follows:
 
-####[User](server/controllers/students/studentsController.js)
+####[User](server/controllers/datas/datasController.js)
 ```javascript
 {
 name       : ... //String
-email      : ... //String
-lesson     : ... //String
-level      : ... //String
-interview  : ... //String
-decision   : ... //String
 }
 ```
 
@@ -88,9 +83,9 @@ The server uses a stateless RESTful API for all database access. It supports fou
 Most routes follow a `/api/:data_type/:data_identifier` pattern. Note that when an aspect of a route is prefaced with a colon `:` it refers to a variable. Do not actually write down a colon in any api calls. Additionally, ALL of the following routes must be prefaced with `/api`.
 
 ```javascript
-GET     api/students                // Get list of students
-POST    api/student                 // Add new student
-DELETE  api/student/:id             // Delete the student
+GET     api/datas                // Get list of data
+POST    api/data                 // Add new data
+DELETE  api/data/:id             // Delete the data
 
 GET     api/users                 // Get list of user
 POST    api/users                 // Add new user
