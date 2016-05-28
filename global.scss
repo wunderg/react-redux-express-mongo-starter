@@ -1,22 +1,27 @@
 /*** Basic Page Setup ***/
+html {
+    overflow-y: scroll; 
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #fafafa
 }
 .container {
+  padding-top: 4rem;
   margin-top: 1rem;
   width: 95% !important;
 }
 
-/*** Components styles ***/
-@import './src/containers/navbar/style.scss';
+.add-student-form {
+  margin-top: 1.5rem;
+}
 
-
-/*** Colors ***/
 @import './node_modules/materialize-css/sass/components/_color.scss';
 
-$primary-color: color("pink", "darken-4") !default;
+/*** Colors ***/
+$primary-color: color("blue", "darken-2") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
@@ -176,7 +181,5 @@ $collection-link-color: $secondary-color !default;
 
 /* Progress Bar */
 $progress-bar-color: $secondary-color !default;
-
-
 
 @import './node_modules/materialize-css/sass/materialize.scss';

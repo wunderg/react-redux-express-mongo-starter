@@ -1,0 +1,19 @@
+.middle {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  width: 30%;
+}
+
+.login-buttons button {
+  margin: 10px 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2rem;
+}

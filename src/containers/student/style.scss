@@ -1,0 +1,56 @@
+.student-row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  padding-top: 1rem;
+}
+.card {
+  flex: 1 1 40%;
+  margin: .5em;
+  padding: 0.1em 1em;
+  line-height: 2.4rem;
+  font-size: 1.3em;
+  min-width: 400px;
+  padding-top: .5rem;
+}
+.card .card-content {
+  padding-top: 0;
+}
+
+.card .card-title {
+  font-weight: 500;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.card hr {
+  margin-top: 0;
+}
+
+.card .collapsible {
+  margin-top: 1.5rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info span {
+  margin-top: 5px;
+}
+
+.decision, .datepicker {
+  width: 100px;
+}
+
+input.datepicker {
+  margin-left: 10px;
+}
+
+.decision-input {
+  margin-top: -15px;
+}

@@ -1,0 +1,39 @@
+.card {
+  margin-top: 15px;
+}
+.section {
+  font-size: 1.2rem;
+  margin: 1.4rem;
+}
+
+.table-of-contents {
+  position: fixed;
+}
+
+.table-of-contents a,{
+  font-weight: 500;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.prompts {
+  font-size: 1.3rem;
+  list-style: circle;
+}
+.prompts li {
+  padding: 5px;
+  font-size: 1.4rem;
+}
+
+.code {
+  font-size: 1.2rem;
+  padding: 0px 15px;
+  margin: 0px;
+}
+
+.side-menu {
+  padding-left: 100px !important;
+}
