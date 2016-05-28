@@ -1,10 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchStudents, fetchInstructors, selectStudent, updateStudent, updateVisibility } from '../../actions';
+import { fetchData, updateData } from '../../actions';
 
-import Filters from '../filters';
-import Students from '../students';
 import Spinner from '../../helpers/spinner.js';
 
 class Dashboard extends Component {
@@ -14,30 +12,19 @@ class Dashboard extends Component {
 
   componentWillMount() {
     if (this.props.user.isAuthenticated) {
-      this.props.fetchStudents();
-      this.props.fetchInstructors();
+      this.props.fetchData();
     }
   }
 
 
   render() {
-    if (this.props.students.isFetching || this.props.instructors.isFetching) {
+    if (this.props.data.isFetching) {
       return <Spinner />;
     }
     return (
       <div className="row">
         <div className="col s12">
-          <Filters
-            instructors={ this.props.instructors.instructors }
-            updateVisibility={ this.props.updateVisibility }
-          />
-        </div>
-        <div className="col s12">
-          <Students
-            data={ this.props.students }
-            selectStudent={this.props.selectStudent}
-            updateStudent={this.props.updateStudent}
-          />
+          Hello world
         </div>
       </div>
     );
@@ -50,26 +37,20 @@ Dashboard.contextTypes = {
 
 function mapStateToProps(state) {
   return {
-    students: state.slocal,
-    user: state.user,
-    instructors: state.instructors,
+    data: state.main,
+    user: state.user
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchStudents, selectStudent, updateStudent, fetchInstructors, updateVisibility }, dispatch);
+  return bindActionCreators({ fetchData, updateData }, dispatch);
 }
 
 Dashboard.propTypes = {
   user: PropTypes.object,
-  students: PropTypes.object,
-  fetchStudents: PropTypes.func,
-  history: PropTypes.object,
-  selectStudent: PropTypes.func,
-  updateStudent: PropTypes.func,
-  fetchInstructors: PropTypes.func,
-  instructors: PropTypes.object,
-  updateVisibility: PropTypes.func,
+  data: PropTypes.object,
+  fetchData: PropTypes.func,
+  updateData: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

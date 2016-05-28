@@ -1,7 +1,7 @@
 {
-  "name": "PTC_Portal",
+  "name": "React-Redux-Express-Mongo-Starter",
   "version": "1.0.0",
-  "description": "Portal is ideal place to track students progress",
+  "description": "My awesome starter kit",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development babel-node ./server/server.js",
@@ -25,9 +25,9 @@
   "author": "Oleg Umarov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wunderg/react-redux-starter/issues"
+    "url": "https://github.com/wunderg/react-redux-express-mongo-starter"
   },
-  "homepage": "https://github.com/wunderg/react-redux-starter#readme",
+  "homepage": "https://github.com/wunderg/react-redux-express-mongo-starter#readme",
   "dependencies": {
     "autoprefixer": "^6.3.6",
     "axios": "^0.9.1",
@@ -54,7 +54,6 @@
     "jwt-simple": "^0.5.0",
     "material-ui": "^0.14.4",
     "materialize-css": "^0.97.5",
-    "moment": "^2.13.0",
     "mongoose": "^4.4.5",
     "node-sass": "^3.6.0",
     "passport": "^0.3.2",

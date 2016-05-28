@@ -6,9 +6,10 @@
 
 1. [Usage](#Usage)
 2. [Development](#development)
-3. [Test Data](#test-data)
-4. [DB Schema](#db-schema)
-5. [Server API](#server-api)
+3. [Production](#production)
+4. [Test Data](#test-data)
+5. [DB Schema](#db-schema)
+6. [Server API](#server-api)
 
 
 ## Development
@@ -40,6 +41,10 @@ npm start
 ```
 
 then navigate to `localhost:3001/`
+
+## Development
+
+// TODO add production instruction
 
 ## Usage
 

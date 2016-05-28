@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-class Filters extends Component {
+class TextInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,4 +37,4 @@ Filters.propTypes = {
   text: PropTypes.string,
 };
 
-export default Filters;
+export default TextInput;
