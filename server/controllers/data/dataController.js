@@ -1,8 +1,8 @@
-import Student from '../../models/studentsModel.js';
+import Data from '../../models/dataModel.js';
 
 export default {
   get(req, res) {
-    Student
+    Data
       .find({})
       .exec()
       .then(student => res.json(student))
@@ -10,16 +10,10 @@ export default {
   },
 
   post(req, res) {
-    const { name, email, lesson, level, interview, decision, instructor } = req.body;
+    const { name } = req.body;
 
-    new Student({
-      name,
-      email,
-      lesson,
-      level,
-      interview,
-      decision,
-      instructor
+    new Data({
+      name
     })
     .save()
     .then(result => res.json(result))
@@ -29,13 +23,13 @@ export default {
   put(req, res) {
     const { _id } = req.body;
 
-    Student.findByIdAndUpdate(_id, req.body)
+    Data.findByIdAndUpdate(_id, req.body)
     .then(result => res.json(result))
     .catch(err => res.json(err));
   },
 
   delete(req, res) {
-    Student
+    Data
     .findById(req.params.id)
     .then(result => {
       result.remove();
