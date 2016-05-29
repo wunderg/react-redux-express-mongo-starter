@@ -42,7 +42,7 @@ npm start
 
 then navigate to `localhost:3001/`
 
-## Development
+## Production
 
 // TODO add production instruction
 
